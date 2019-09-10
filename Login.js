@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 export default class Login extends Component {
   constructor(props) {
     super(props);
@@ -20,8 +21,11 @@ export default class Login extends Component {
     if (this.state.username == "test" && this.state.password == "test") {
       alert("Submited");
     }
-    else
+    else {
       alert("Submission failed");
+    }
+
+    
   }
   onClear() {
     this.setState({
@@ -29,7 +33,6 @@ export default class Login extends Component {
       password: ""
     });
   }
-
 
   render() {
     return (
@@ -52,17 +55,15 @@ export default class Login extends Component {
         <br />
 
         <button type="button"
-          className="btn btn-info"
+          className="btn btn-primary"
           onClick={this.onSubmit.bind(this)}>Login</button>
 
         <button type="button"
-          className="btn btn-info"
+          className="btn btn-primary"
           onClick={this.onClear.bind(this)}>Clear</button>
-
-
       </div>
-
     )
-
   }
 }
+
+

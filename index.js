@@ -5,18 +5,21 @@ import Home from './Home';
 import Login from './Login';
 import Signup from './Signup';
 import About from './About';
+import Details from './Details';
+import { Provider } from 'react-redux';
+import store from './store';
 import './style.css';
 
 class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
   }
 
-  componentWillMount(){
+  componentWillMount() {
     console.log("componentWillMount");
   }
 
-  componentDidMount(){
+  componentDidMount() {
     console.log("componentDidMount");
   }
 
@@ -24,31 +27,37 @@ class App extends Component {
     return (
       <div className="container">
         <div className="col-lg-7">
-        <BrowserRouter>
-          <div className="main" >
-          <Link to='/About'>About</Link>
-            <Link to='/Login'>Login</Link>
-            <Link to='/Signup'>Signup</Link>
-            <Link to='/Home'>Home</Link>
-            
-          </div>
-          <hr />
-          <div className="content">
+          <BrowserRouter>
+            <div className="main" >
+              <Link to='/Details'>Details</Link>
+              <Link to='/About'>About</Link>
+              <Link to='/Login'>Login</Link>
+              <Link to='/Signup'>Signup</Link>
+              <Link to='/Home'>Home</Link>
 
-            <Switch>
-              <Route exact path='/Home' component={Home} />
-              <Route exact path='/Login' component={Login} />
-              <Route exact path='/Signup' component={Signup} />
-              <Route exact path='/About' component={About} />
 
-            </Switch>
+            </div>
+            <hr />
+            <div className="content">
 
-          </div>
-        </BrowserRouter>
+              <Switch>
+                <Route exact path='/Home' component={Home} />
+                <Route exact path='/Login' component={Login} />
+                <Route exact path='/Signup' component={Signup} />
+                <Route exact path='/About' component={About} />
+                <Route exact path='/Details' component={Details} />
+
+              </Switch>
+
+            </div>
+          </BrowserRouter>
+        </div>
       </div>
-     </div>
     );
   }
 }
 
-render(<App />, document.getElementById('root'));
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>, document.getElementById('root'));
