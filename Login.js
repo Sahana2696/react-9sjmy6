@@ -1,27 +1,68 @@
 import React, { Component } from 'react';
 
 export default class Login extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state={username:'',password:''}
+    this.state = { username: '', password: '' }
+  }
+  handleUsername(e) {
+    this.setState({
+      username: e.target.value,
+    });
+  };
+
+  handlePassword(e) {
+    this.setState({
+      password: e.target.value,
+    });
+  }
+  onSubmit() {
+    if (this.state.username == "test" && this.state.password == "test") {
+      alert("Submited");
+    }
+    else
+      alert("Submission failed");
+  }
+  onClear() {
+    this.setState({
+      username: "",
+      password: ""
+    });
   }
 
-render(){
-  return(
-    
-    <div className="col-lg-8 detail">
-    <h1> Login Page</h1><br/>
-    <label> UserName:</label>
-    <input type="text" value={this.state.username} className="form-control"/>
 
-     <label> Password:</label>
-    <input type="password" value={this.state.password} className="form-control"/>
-    <br/>
-    
-    <button type="button" className="btn btn-info">Login</button>
-    </div>
+  render() {
+    return (
 
-  )
+      <div className="col-lg-8 ">
+        <h1> Login Page</h1><br />
 
-}
+        <label> UserName:</label>
+        <input type="text"
+          value={this.state.username}
+          className="form-control"
+          onChange={this.handleUsername.bind(this)} />
+        <br />
+
+        <label> Password:</label>
+        <input type="password"
+          value={this.state.password}
+          className="form-control"
+          onChange={this.handlePassword.bind(this)} />
+        <br />
+
+        <button type="button"
+          className="btn btn-info"
+          onClick={this.onSubmit.bind(this)}>Login</button>
+
+        <button type="button"
+          className="btn btn-info"
+          onClick={this.onClear.bind(this)}>Clear</button>
+
+
+      </div>
+
+    )
+
+  }
 }
