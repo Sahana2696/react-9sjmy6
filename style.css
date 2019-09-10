@@ -1,0 +1,44 @@
+.main{
+  margin-top:30px;
+
+  position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(114.1501577487deg, #18b2b8 4.9296141814%, #245fc7 97.838894682%);
+    z-index: 10;
+    height: 7rem;
+
+}
+.main a{
+  margin:10px;
+  font-size: 25px;
+    font-weight: 600;
+    text-decoration:none;
+    color:white;
+    float: right;
+    padding: 5px 10px;
+    font-family: "Noto Sans",sans-serif;
+
+}
+.main a:hover{
+  color:black;
+
+}
+.content{
+      padding-left: 37px;
+    padding-right: 30px;
+}
+
+.col-lg-8{
+  margin-top:50px;
+}
+.detail{
+   margin-top:80px;
+}
+.container{
+      margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px
+}
