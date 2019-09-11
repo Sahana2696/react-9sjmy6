@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Details from './Details';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+
 
 export default class Signup extends Component {
   constructor(props) {
@@ -42,6 +42,7 @@ export default class Signup extends Component {
       email: ""
     });
   }
+
   render() {
     return (
 
