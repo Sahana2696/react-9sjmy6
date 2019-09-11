@@ -40,8 +40,11 @@ export default class Details extends Component {
     return (
 
       <div>
+     
         <div className="detail">
+           <h1 >TITLE:</h1>
           {
+          
             this.state.data && this.state.data.map(detail => {
               return <div><input type="checkbox" value={detail.title} onChange={this.handleChange.bind(this)} />{detail.title}</div>
             }
