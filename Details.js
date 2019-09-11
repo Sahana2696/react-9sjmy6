@@ -8,9 +8,9 @@ export default class Details extends Component {
     this.state = {
       data: ''
     }
-  } 
-  handleChange(event){
-    console.log("check",event.target)
+  }
+  handleChange(event) {
+    console.log("check", event.target)
   }
   componentDidMount() {
     fetch('https://jsonplaceholder.typicode.com/todos/')
@@ -43,12 +43,11 @@ export default class Details extends Component {
         <div className="detail">
           {
             this.state.data && this.state.data.map(detail => {
-              return  <div><input type="checkbox" value={detail.title} onChange={this.handleChange.bind(this)}/>{detail.title}</div>
+              return <div><input type="checkbox" value={detail.title} onChange={this.handleChange.bind(this)} />{detail.title}</div>
             }
             )
           }
-          
-         
+
         </div>
       </div >
     );
