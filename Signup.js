@@ -77,7 +77,6 @@ export default class Signup extends Component {
               role='button'
               className="btn btn-primary"
               onClick={this.onSubmit.bind(this)}>SendData</button>
-          
         </div>
 
         <button type="button"
