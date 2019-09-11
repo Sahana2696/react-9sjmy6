@@ -17,7 +17,7 @@ export default class Details extends Component {
           return <li>{this.props.Details[key]}</li>
        
         })
-        })
+        
       }
       </h1>
       </div>
