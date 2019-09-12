@@ -13,8 +13,6 @@ function reducer(state = globalState, action) {
 
     case "SIGNUP_DETAILS":
       return state.Detail = action.details;
- 
-
     default:
       return state;
   }

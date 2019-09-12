@@ -5,7 +5,7 @@ export default class About extends Component {
     super(props);
     this.state = {
       show: false,
-   
+
     }
   }
   onShow() {

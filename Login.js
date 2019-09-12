@@ -28,8 +28,6 @@ export default class Login extends Component {
     else {
       this.setState({ errorMsg: true })
     }
-
-
   }
   onClear() {
     this.setState({
@@ -37,7 +35,6 @@ export default class Login extends Component {
       password: ""
     });
   }
-
   render() {
     return (
 
@@ -71,10 +68,7 @@ export default class Login extends Component {
           <button type="button"
             className="btn btn-primary"
             onClick={this.onSubmit.bind(this)}>Login</button>
-
-
         </div>
-
       </div>
     )
   }

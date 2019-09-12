@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import View from './View';
 
 export default class Home extends Component {
   constructor(props) {
@@ -22,6 +22,7 @@ export default class Home extends Component {
     return (
       <div className="detail">
         <h1> Welcome </h1>
+        <View data={{id:1,name:"hello"}}/>
         
       </div>
     )

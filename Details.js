@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import { connect } from 'react-redux';
-
+import View from './View';
 
 export default class Details extends Component {
   constructor(props) {
@@ -20,37 +20,22 @@ export default class Details extends Component {
             this.setState({ data: mainResp })
           })
       })
-
-
   }
-
   render() {
-    const data = []
-    // const data2={
-    //   id:'1',
-    //   name:'sana',
-    //   age:'22',
-    //   details:{
-    //     firstname:'Keerthi',
-    //     lastname:'NS',
-    //     dob:'Sept'
-    //   }
-    // }
     console.log("Data in render-->", this.state.data);
     return (
-
       <div>
-     
         <div className="detail">
-           <h1 >TITLE:</h1>
-          {
           
+          {
             this.state.data && this.state.data.map(detail => {
-              return <div><input type="checkbox" value={detail.title} onChange={this.handleChange.bind(this)} />{detail.title}</div>
+              return <div>
+                <View data={detail} />
+              </div>
             }
             )
           }
-        <View  />
+        
         </div>
       </div >
     );

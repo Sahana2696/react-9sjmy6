@@ -8,6 +8,7 @@ import About from './About';
 import Details from './Details';
 import { Provider } from 'react-redux';
 import store from './store';
+import View from './View';
 import './style.css';
 
 class App extends Component {
@@ -29,13 +30,12 @@ class App extends Component {
         <div className="col-lg-7">
           <BrowserRouter history>
             <div className="main" >
+              <Link to='/View'>View </Link>
               <Link to='/Details'>Details</Link>
               <Link to='/About'>About</Link>
               <Link to='/Login'>Login</Link>
               <Link to='/Signup'>Signup</Link>
               <Link to='/Home'>Home</Link>
-
-
             </div>
             <hr />
             <div className="content">
@@ -46,6 +46,7 @@ class App extends Component {
                 <Route exact path='/Signup' component={Signup} />
                 <Route exact path='/About' component={About} />
                 <Route exact path='/Details' component={Details} />
+                <Route exact path='/View' component={View}/>
 
               </Switch>
 
