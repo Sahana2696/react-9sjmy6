@@ -28,6 +28,7 @@ export default class Login extends Component {
     else {
       this.setState({ errorMsg: true })
     }
+    this.props.history.push('/Home')
   }
   onClear() {
     this.setState({

@@ -30,7 +30,7 @@ class App extends Component {
         <div className="col-lg-7">
           <BrowserRouter history>
             <div className="main" >
-              <Link to='/View'>View </Link>
+             
               <Link to='/Details'>Details</Link>
               <Link to='/About'>About</Link>
               <Link to='/Login'>Login</Link>
@@ -46,7 +46,7 @@ class App extends Component {
                 <Route exact path='/Signup' component={Signup} />
                 <Route exact path='/About' component={About} />
                 <Route exact path='/Details' component={Details} />
-                <Route exact path='/View' component={View}/>
+               
 
               </Switch>
 
