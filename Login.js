@@ -4,11 +4,11 @@ import React, { Component } from 'react';
 export default class Login extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
-      username: '', 
+    this.state = {
+      username: '',
       password: '',
       errorMsg: false
-       }
+    }
   }
   handleUsername(e) {
     this.setState({
@@ -23,12 +23,12 @@ export default class Login extends Component {
   }
   onSubmit() {
     if (this.state.username == "test" && this.state.password == "test") {
-      this.setState({errorMsg:false})
+      this.setState({ errorMsg: false })
     }
     else {
-      this.setState({errorMsg:true})
+      this.setState({ errorMsg: true })
     }
-    
+
 
   }
   onClear() {
@@ -40,13 +40,13 @@ export default class Login extends Component {
 
   render() {
     return (
-      
+
       <div className="col-lg-8 ">
         <h1> Login Page</h1><br />
         {
           this.state.errorMsg &&
-        <div className="alert alert-danger">
-        <strong>ERROR!</strong> Invalid Username or Password.
+          <div className="alert alert-danger">
+            <strong>ERROR!</strong> Invalid Username or Password.
         </div>
         }
         <label> UserName:</label>
@@ -66,11 +66,13 @@ export default class Login extends Component {
         <div className="pull-right">
           <button type="button"
             className="btn btn-primary"
-            onClick={this.onSubmit.bind(this)}>Login</button>
+            onClick={this.onClear.bind(this)}>Clear</button>
 
           <button type="button"
             className="btn btn-primary"
-            onClick={this.onClear.bind(this)}>Clear</button>
+            onClick={this.onSubmit.bind(this)}>Login</button>
+
+
         </div>
 
       </div>

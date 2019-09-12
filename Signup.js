@@ -31,7 +31,7 @@ export default class Signup extends Component {
   }
   onSubmit() {
     this.props.sendData(this.state)
-    console.log("props",this.props)
+    console.log("props", this.props)
     this.props.history.push("/Details")
   }
 
@@ -71,20 +71,16 @@ export default class Signup extends Component {
           onChange={this.handleMobile.bind(this)} />
         <br />
 
-        <div>
-          
-            <button type='button'
-              role='button'
-              className="btn btn-primary"
-              onClick={this.onSubmit.bind(this)}>SendData</button>
-        </div>
-
         <button type="button"
           className="btn btn-primary"
           onClick={this.onClear.bind(this)}>Clear</button>
+
+        <button type='button'
+          role='button'
+          className="btn btn-primary"
+          onClick={this.onSubmit.bind(this)}>SendData</button>
       </div>
     )
-
   }
 }
 

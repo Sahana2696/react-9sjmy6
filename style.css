@@ -41,8 +41,12 @@
 }
 .btn-primary{
   margin:15px;
+  float:right;
 }
 .pull-right{
   float:right;
   
+}
+.btn-info{
+ margin:20px;
 }

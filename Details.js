@@ -50,7 +50,7 @@ export default class Details extends Component {
             }
             )
           }
-
+        <View  />
         </div>
       </div >
     );
