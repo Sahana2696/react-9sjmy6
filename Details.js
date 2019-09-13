@@ -22,11 +22,11 @@ export default class Details extends Component {
       })
   }
   render() {
-    console.log("Data in render-->", this.state.data);
+    console.log("Data in render-->", this.props.state.Detail);
     return (
       <div>
         <div className="detail">
-          
+
           {
             this.state.data && this.state.data.map(detail => {
               return <div>
@@ -36,17 +36,25 @@ export default class Details extends Component {
             )
           }
           <div>
-      <h3>{this.props.SignUp.name}</h3>
-        </div>
+          {
+            this.props.state.Detail && Object.keys(this.props.state.Detail).map(key=>{
+              return <h1>{this.props.state.Detail[key]}</h1>
+            })
+          }
+         
+          </div>
+
         </div>
       </div >
     );
   }
 }
+
 function mapStateToProps(state) {
   return {
-   state
+    state
   };
 }
+
 
 export default connect(mapStateToProps, null)(Details);

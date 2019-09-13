@@ -29,8 +29,8 @@ class App extends Component {
       <div className="container">
         <div className="col-lg-7">
           <BrowserRouter history>
+
             <div className="main" >
-             
               <Link to='/Details'>Details</Link>
               <Link to='/About'>About</Link>
               <Link to='/Login'>Login</Link>
@@ -38,19 +38,17 @@ class App extends Component {
               <Link to='/Home'>Home</Link>
             </div>
             <hr />
-            <div className="content">
 
+            <div className="content">
               <Switch>
                 <Route exact path='/Home' component={Home} />
                 <Route exact path='/Login' component={Login} />
                 <Route exact path='/Signup' component={Signup} />
                 <Route exact path='/About' component={About} />
                 <Route exact path='/Details' component={Details} />
-               
-
               </Switch>
-
             </div>
+
           </BrowserRouter>
         </div>
       </div>

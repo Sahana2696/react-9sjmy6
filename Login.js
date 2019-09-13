@@ -24,11 +24,11 @@ export default class Login extends Component {
   onSubmit() {
     if (this.state.username == "test" && this.state.password == "test") {
       this.setState({ errorMsg: false })
+      this.props.history.push('/Home')
     }
     else {
       this.setState({ errorMsg: true })
     }
-    this.props.history.push('/Home')
   }
   onClear() {
     this.setState({
