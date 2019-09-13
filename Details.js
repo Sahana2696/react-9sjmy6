@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 import View from './View';
 
 export default class Details extends Component {
@@ -35,16 +35,18 @@ export default class Details extends Component {
             }
             )
           }
-        
+          <div>
+      <h3>{this.props.SignUp.name}</h3>
+        </div>
         </div>
       </div >
     );
   }
 }
-// function mapStateToProps(state) {
-//   return {
-//     Details: state
-//   };
-// }
+function mapStateToProps(state) {
+  return {
+   state
+  };
+}
 
-// export default connect(mapStateToProps, null)(Details);
+export default connect(mapStateToProps, null)(Details);

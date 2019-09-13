@@ -21,8 +21,8 @@ export default class Home extends Component {
   render() {
     return (
       <div className="detail">
-        <h1> Welcome </h1>
-        <View data={{id:1,name:"hello"}}/>
+        <h1 style={{fontSize:"60px",textAlign:"center"}}> WELCOME </h1>
+        
         
       </div>
     )

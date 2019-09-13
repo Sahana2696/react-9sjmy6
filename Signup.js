@@ -85,10 +85,9 @@ export default class Signup extends Component {
 }
 
 const mapDispatchToProps = dispatch => {
+    console.log("dispatch")
   return {
     sendData: (details) => dispatch({ type: 'SIGNUP_DETAILS', details })
-
-
   }
 }
 function mapStateToProps(state) {

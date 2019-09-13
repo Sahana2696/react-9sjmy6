@@ -4,7 +4,8 @@ const globalState = {
     email: "",
     mobile: ""
   },
-  Detail: {
+  Detail:{
+
   }
 };
 function reducer(state = globalState, action) {
@@ -12,7 +13,8 @@ function reducer(state = globalState, action) {
   switch (action.type) {
 
     case "SIGNUP_DETAILS":
-      return state.Detail = action.details;
+    
+      return state.SignUp = action.details;
     default:
       return state;
   }
