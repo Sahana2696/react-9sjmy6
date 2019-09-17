@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import View from './View';
+import axios  from 'axios'
 
 export default class Details extends Component {
   constructor(props) {
@@ -12,15 +13,29 @@ export default class Details extends Component {
   handleChange(event) {
     console.log("check", event.target)
   }
+ 
   componentDidMount() {
-    fetch('https://jsonplaceholder.typicode.com/todos/')
+             fetch('https://jsonplaceholder.typicode.com/todos/')
       .then(res => {
         res.json()
           .then(mainResp => {
             this.setState({ data: mainResp })
           })
       })
+      
+     axios({method:'GET',url:'https://jsonplaceholder.typicode.com/todos/'}).then(res=>{
+       console.log("Axios Resp-->",res.data);
+     })
+     this.getAPIData();
+
+    
+
   }
+async getAPIData(){
+  const resp=await  axios({method:'GET',url:'https://jsonplaceholder.typicode.com/todos/'})
+  console.log("Asios inside await-->",resp.data);
+}
+ 
   render() {
     console.log("Data in render-->", this.props.state.Detail);
     return (
