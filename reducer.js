@@ -12,7 +12,7 @@ function reducer(state = globalState, action) {
   switch (action.type) {
 
     case "SIGNUP_DETAILS":
-console
+
       return {
         ...state,
         Detail:action.details

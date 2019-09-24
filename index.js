@@ -29,7 +29,6 @@ class App extends Component {
       <div className="container">
         <div className="col-lg-7">
           <BrowserRouter history>
-
             <div className="main" >
               <Link to='/Details'>Details</Link>
               <Link to='/About'>About</Link>
